@@ -23,11 +23,9 @@ from streamlit_folium import st_folium
 
 # ── Password gate ──────────────────────────────────────────────────────────────
 
-_PASSWORD = "locus_denverpnr"
-
 def require_password():
     def _check():
-        if st.session_state.get("pw_input", "") == _PASSWORD:
+        if st.session_state.get("pw_input", "") == st.secrets["APP_PASSWORD"]:
             st.session_state["authed"] = True
             st.session_state.pop("pw_input", None)
         else:
