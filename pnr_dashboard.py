@@ -61,7 +61,7 @@ st.markdown("""
 
 _DIR       = os.path.dirname(os.path.abspath(__file__))
 DATA       = os.path.join(_DIR, "Data")
-TRACTS_SHP = r"F:\NationalData\Geography\2022geo\tl_2022_08_tract.shp"
+TRACTS_SHP = os.path.join(DATA, "tl_2022_08_tract.shp")
 
 # ── Cached loaders ─────────────────────────────────────────────────────────────
 
